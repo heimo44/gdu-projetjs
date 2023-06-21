@@ -11507,3 +11507,70 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.items{
+  display:flex; 
+  width:90% ;
+  justify-content: space-between; 
+  margin-bottom:1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.text-item{
+  font-weight: bolder;
+  margin: 0;
+}
+
+#add-div{
+  display: flex;
+  justify-content: flex-end;
+  width: 70vw;
+}
+
+.text-container{
+  width: 95%;
+}
+
+#add-btn{
+  width: 5%;
+
+}
+
+.button-tasks{
+  border: 1px rgb(26, 188, 156) solid;
+  background-color: rgb(26, 188, 156);
+  color:#fff;
+  font-weight:bolder;
+  width:45px;
+}
+
+.delete-div{
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.delete-div button{
+  min-width: 45px;
+  max-height: 27.6px;
+}
+
+.button-true:hover{
+  border-bottom: 2px solid rgb(26, 188, 156);
+}
+
+.button-false:hover{
+  border-bottom: 2px solid rgb(188, 58, 26);
+}
+#itemButton{
+  width:100px;
+  color: #fff;
+  font-weight: bolder;
+}
+.hide{
+  display: none !important;
+}
+.open{
+  display: block;
+}
