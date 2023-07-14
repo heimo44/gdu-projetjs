@@ -11507,3 +11507,116 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+/* Global Attribute */
+.button-tasks{
+  border: 1px rgb(26, 188, 156) solid;
+  background-color: rgb(26, 188, 156);
+  color:#fff;
+  font-weight:bolder;
+  width:45px;
+}
+
+/* TasksJs Attribute */
+.items{
+  display:flex; 
+  width:90% ;
+  justify-content: space-between; 
+  margin-bottom:1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.text-container{
+  width: 95%;
+}
+
+.text-item{
+  font-weight: bolder;
+  margin: 0;
+}
+
+.delete-div{
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.delete-div button{
+  min-width: 45px;
+  max-height: 27.6px;
+}
+
+.button-true:hover{
+  border-bottom: 2px solid rgb(26, 188, 156);
+}
+
+.button-false:hover{
+  border-bottom: 2px solid rgb(188, 58, 26);
+}
+
+/* Add Button*/
+#add-div{
+  position: relative;
+  width: 70vw;
+}
+
+#add-btn{
+  position: absolute;
+  right: 0;
+
+}
+
+/* Modal Attribute*/
+
+  /*Modal background*/
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /*Modal content*/
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content label{
+    padding-bottom: 1rem;
+  }
+
+  #tags-length{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #button-container{
+    width: 100%;
+    padding-bottom: 1rem;
+    margin-left: 22.5px;
+  }
+
+  #tags-length input{
+    width: calc((100% / 3) - 45px);
+    margin-left: 22.5px;
+    margin-right: 22.5px;
+    margin-bottom: 1rem;
+  }
+
+/* ItemJs Attribute */
+#itemButton{
+  width:100px;
+  color: #fff;
+  font-weight: bolder;
+}
