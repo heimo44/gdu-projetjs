@@ -85,7 +85,8 @@ function updateStatus(parseItem, tags, replace){
             "is_complete": true}`)
         }
         window.location.href ="item.html?" + replace
-}}
+    }
+}
 
 function deleteItem(deleteButton, replace){
     deleteButton.onclick = function(){
@@ -99,14 +100,10 @@ function deleteItem(deleteButton, replace){
                    
                    let oldKey = i + 1
                    localStorage.setItem("data" + i, localStorage.getItem("data" + oldKey))
-                   localStorage.removeItem("data" + oldKey)   
-       
+                   localStorage.removeItem("data" + oldKey)          
        }          
    } 
    window.location.href = "tasks.html";
     }
-          
-
 }
-
-data()
+data();
