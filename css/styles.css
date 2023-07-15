@@ -11613,7 +11613,7 @@ html {
     width: 150px;
     }
 
-  #modal-close:hover, #modal-save:hover, #add-tags:hover, .button-container button:hover, .button-redirect:hover{
+  #modal-close:hover, #modal-save:hover, #add-tags:hover,.delete-button:hover, #add-btn:hover, .button-container button:hover, .button-redirect:hover{
     box-shadow: 0 0 11px rgba(25,25,25,.6);
   }
 
