@@ -11596,12 +11596,33 @@ html {
     padding-bottom: 1rem;
   }
 
+  .button-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-container button{
+    background-color: rgb(26, 188, 156);
+    color: #fff;
+    border: none;
+    margin: 1rem 1rem;
+  }
+
+  #modal-close, #modal-save{
+    width: 150px;
+    }
+
+  #modal-close:hover, #modal-save:hover, #add-tags:hover,.delete-button:hover, #add-btn:hover, .button-container button:hover, .button-redirect:hover{
+    box-shadow: 0 0 11px rgba(25,25,25,.6);
+  }
+
   #tags-length{
     display: flex;
     flex-wrap: wrap;
   }
 
-  #button-container{
+  #tags-container{
     width: 100%;
     padding-bottom: 1rem;
     margin-left: 22.5px;
@@ -11615,8 +11636,42 @@ html {
   }
 
 /* ItemJs Attribute */
-#itemButton{
-  width:100px;
-  color: #fff;
+
+.container-item{
+  display:flex;
+  width: 100%;
+  flex-direction: column;
+  padding:1rem
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.button-container button{
+  width: 150px;
   font-weight: bolder;
+}
+
+.container-redirect{
+display: flex;
+width: 100%;
+flex-direction: row-reverse;
+}
+
+.container-top{
+  display: flex;
+  width: 70vw;
+  flex-direction: row-reverse;
+  margin-bottom: 2rem;
+}
+
+.button-redirect{
+border: none;
+background-color: #badce3;
+font-weight: bolder;
+width: 150px;
 }
