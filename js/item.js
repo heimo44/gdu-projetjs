@@ -1,5 +1,3 @@
-
-
 function data(){ 
 
     //Params
@@ -24,33 +22,44 @@ function data(){
 
     //Create elements
     let appParent = document.createElement('div')
+    let container = document.createElement('div')
     let appParagraphe = document.createElement('p')
     let appSpan = document.createElement('span')
-    let parent = app.appendChild(appParent)
-
+    let divButton = document.createElement('div')
     let appButton = document.createElement('button')  
-    let deleteButton = document.createElement('button')  
-    
-    parent.appendChild(appSpan)
-    parent.appendChild(appParagraphe)
-    parent.appendChild(appButton)
-    parent.appendChild(deleteButton)
+    let deleteButton = document.createElement('button')
+    let divExit = document.createElement('div')
+    let exitButton  =  document.createElement('button')
+
+    let parent = app.appendChild(appParent)
+    parent.appendChild(container).appendChild(appParagraphe)
+    parent.appendChild(container).appendChild(appSpan)
+    parent.appendChild(divButton).appendChild(appButton)
+    parent.appendChild(divButton).appendChild(deleteButton)
+    parent.appendChild(divExit).appendChild(exitButton)
+
     
 
     //Set attribute
+    container.setAttribute('class', 'container-item')
+    divButton.setAttribute('class', 'button-container')
     appButton.setAttribute('id', 'itemButton');
-    deleteButton.setAttribute('class', 'button-tasks delete-button')
-    deleteButton.textContent = ('X')
+    deleteButton.setAttribute('class', 'delete-button')
+    divExit.setAttribute('class', 'container-redirect')
+    exitButton.setAttribute('class', 'button-redirect')
+
+    deleteButton.textContent = 'X'
+    exitButton.textContent = 'Retour'
     let tags = [];
 
     //Element text
-    appParagraphe.innerText = parseItem.created_at
+    appParagraphe.textContent = `Crée le ${parseItem.created_at}`
     for (let i = 0; i < parseItem.Tags.length; i++){
         tags.push(parseItem.Tags[i])
     }
 
-    appSpan.textContent = tags.toString().replace(',' , ', ')
-    
+    appSpan.textContent = `Tags : ${tags.toString().replace(',' , ', ')}`
+
     if (parseItem.is_complete){
         appButton.textContent = "Terminé"
         appButton.style.cssText='background-color:#1abc9c'
@@ -59,6 +68,11 @@ function data(){
         appButton.textContent = "À faire"
         appButton.style.cssText='background-color:#bc3a1a'
     }  
+
+    exitButton.onclick = function(event){
+        event.preventDefault();
+        window.location.href = '/tasks.html'
+    }
     deleteItem(deleteButton, replace);
     updateStatus(parseItem, tags, replace);
 }
@@ -76,6 +90,7 @@ function updateStatus(parseItem, tags, replace){
             "created_at": "${parseItem.created_at}",
             "Tags": ${jsonTag},
             "is_complete": false}`)
+            window.location.href ="item.html?" + replace
 }
         else{
             localStorage.setItem("data" + replace, `{"id": ${parseItem.id},
@@ -83,8 +98,9 @@ function updateStatus(parseItem, tags, replace){
             "created_at": "${parseItem.created_at}",
             "Tags": ${jsonTag},
             "is_complete": true}`)
+            window.location.href ="tasks.html"
         }
-        window.location.href ="item.html?" + replace
+        
     }
 }
 

@@ -21,11 +21,11 @@ document.getElementById('clickMe').addEventListener("click", function(event){
     
     if(nameKey.value && nameKey.value !== localStorage.getItem("prenom")){
                 
-        
+        localStorage.clear()
         function startSession(data){
-
             window.location.href = "tasks.html";
             localStorage.setItem("prenom", nameKey.value);
+            
             for (let i = 0; i <= data.todolist.length; i++){
                 let z = i + 1
                 let y = "data" + z
@@ -39,9 +39,10 @@ document.getElementById('clickMe').addEventListener("click", function(event){
                     "created_at": "${newDate}",
                     "Tags": ${tagsStr},
                     "is_complete": ${data.todolist[i].is_complete}}
-                  ` 
-                localStorage.setItem(y , value);              
+                    ` 
+                    localStorage.setItem(y , value);              
             }
+              
         }      
     } 
 
